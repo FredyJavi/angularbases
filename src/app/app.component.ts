@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'inicial';
+ public title:string = 'Home';
+ public counter:number=10;
+
+ incrementar(){
+  this.counter=this.counter+1;
+ }
+decrementar(){
+  if(this.counter>0){
+    this.counter=this.counter-1;
+  }
+  else{
+    this.counter=0;
+  }
+
+}
+reset(){
+  this.counter=0;
+}
 }
